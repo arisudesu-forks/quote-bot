@@ -36,15 +36,15 @@ function sleep (ms) {
 async function loopClearStickerPack () {
   setInterval(async () => {
     const me = await telegram.getMe()
-    await telegram.getStickerSet(config.globalStickerSet.name + me.username).then(async (sticketSet) => {
-      for (const i in sticketSet.stickers) {
-        const sticker = sticketSet.stickers[i]
-        if (i > config.globalStickerSet.save_sticker_count - 1) {
-          telegram.deleteStickerFromSet(sticker.file_id).catch(() => {
-          })
-        }
+    const sticketSet = await telegram.getStickerSet(config.globalStickerSet.name + me.username).catch(() => {})
+    if (!sticketSet) return
+    for (const i in sticketSet.stickers) {
+      const sticker = sticketSet.stickers[i]
+      if (i > config.globalStickerSet.save_sticker_count - 1) {
+        telegram.deleteStickerFromSet(sticker.file_id).catch(() => {
+        })
       }
-    })
+    }
   }, 500)
 }
 
@@ -80,7 +80,7 @@ module.exports = async (ctx, next) => {
   }
 
   quoteCountIO.mark()
-  await ctx.replyWithChatAction('upload_photo')
+  await ctx.replyWithChatAction('choose_sticker')
 
   const flag = {
     count: false,
@@ -283,6 +283,13 @@ module.exports = async (ctx, next) => {
     if (flag.media && quoteMessage.sticker) {
       message.media = [quoteMessage.sticker]
       message.mediaType = 'sticker'
+    }
+    if (flag.media && (quoteMessage.animation || quoteMessage.video)) {
+      const { thumbnail } = quoteMessage.animation || quoteMessage.video
+      message.media = [thumbnail]
+    }
+    if (flag.media && quoteMessage.voice) {
+      message.voice = quoteMessage.voice
     }
 
     if (messageFrom.id) {
