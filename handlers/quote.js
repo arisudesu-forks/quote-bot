@@ -22,6 +22,7 @@ const telegram = new Telegram(process.env.BOT_TOKEN)
 
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'))
 
+// TODO: read pack name from config
 // for create global sticker pack
 // telegram.createNewStickerSet(66478514, 'created_by_QuotLyBot', 'Created by @QuotLyBot', {
 //   png_sticker: { source: 'placeholder.png' },

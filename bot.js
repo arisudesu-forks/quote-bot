@@ -72,7 +72,7 @@ bot.use((ctx, next) => {
   return true
 })
 
-// bot.use(require('./middlewares/metrics'))
+bot.use(require('./middlewares/metrics'))
 bot.use(stats)
 
 bot.use((ctx, next) => {
