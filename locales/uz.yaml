@@ -27,12 +27,10 @@ help: |2
     /help yoki /start — ushbu matnni olish
     🇺🇸 /lang — tilni o'zgartirish
     🇷🇺 /lang — tilni o'zgartirish
-    <b>☕️ Dasturchini kofe bilan mehmon qilish:</b> donate.lyo.su
-    <b>👨🏻‍💻 Dasturchini blogi:</b> @LyBlog
-    <b>GitHub:</b> github.com/LyoSU/quote-bot
+    <b>👨🏻‍💻 Dasturchini blogi:</b> @arisudesu
 help_group: |
   <b>Assalomu alaykum!</b>
-  Men guruhlarga xabarga javoban /q buyrug'i asosida iqtiboslar yarataman. 
+  Men guruhlarga xabarga javoban /q buyrug'i asosida iqtiboslar yarataman.
 
   Batafsil ushbu buyruq orqali <a href="t.me/${username}?start=help">/help</a> men bilan shaxsiy xabarlarda bilib olishingiz mumkin
 btn:

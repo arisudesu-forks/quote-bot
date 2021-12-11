@@ -37,10 +37,7 @@ help: |2
   🇺🇸/lang は-言語変更
   🇷🇺/lang - изменить язык
 
-  <b>☕️開発者のための購入コーヒー：</b> donate.lyo.su
-
-  <b>👨🏻💻開発者ブログ：</b> @LyBlog
-  <b>GitHubの：</b> github.com/LyoSU/quote-bot
+  <b>👨🏻💻開発者ブログ：</b> @arisudesu
 help_group: |
   <b>こんにちは！</b>
   私は、メッセージに応じて、/ qコマンドを使用して、グループ内の引用符を作成する

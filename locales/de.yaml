@@ -37,10 +37,7 @@ help: |2
   🇺🇸 /lang - Sprache ändern
   🇷🇺 /lang - изменить язык
 
-  <b>☕️ Kaffee kaufen für Entwickler:</b> donate.lyo.su
-
-  <b>👨🏻‍💻 Entwicklerblog:</b> @LyBlog
-  <b>GitHub:</b> github.com/LyoSU/quote-bot
+  <b>👨🏻‍💻 Entwicklerblog:</b> @arisudesu
 help_group: |
   <b>Hallo!</b>
   Ich werde Anführungszeichen in der Gruppe erstellen, indem ich den Befehl /q als Antwort auf die Nachricht verwende

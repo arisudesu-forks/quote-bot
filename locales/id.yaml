@@ -29,8 +29,7 @@ help: |2
       ➖ Bot dapat berfungsi baik dalam obrolan maupun dalam pesan langsung.
       ➖ Untuk menambahkan bot ke grup Anda, klik tombol di bawah.
 
-      <b>👨🏻‍💻 Pengembang blog:</b> @LyBlog
-      <b>GitHub:</b> github.com/LyoSU/quote-bot
+      <b>👨🏻‍💻 Pengembang blog:</b> @arisudesu
 help_group: |
   <b>Halo!</b>
   Saya akan membuat tanda kutip di grup menggunakan perintah / q sebagai tanggapan atas pesan

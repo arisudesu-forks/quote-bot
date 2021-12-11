@@ -51,7 +51,7 @@ module.exports = async ctx => {
       button.push(Markup.callbackButton(locales[key].flag, `set_language:${key}`))
     })
 
-    ctx.reply('🇷🇺 Выберите язык\n🇺🇸 Choose language\n\nHelp with translation: https://crwd.in/QuotLyBot', {
+    ctx.reply('🇷🇺 Выберите язык\n🇺🇸 Choose language', {
       reply_markup: Markup.inlineKeyboard(button, {
         columns: 2
       })

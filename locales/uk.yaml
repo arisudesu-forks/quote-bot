@@ -36,10 +36,7 @@ help: |2
 
     🇺🇸 /lang - change the language
 
-    <b>☕️ Купити кави розробнику:</b> donate.lyo.su
-
-    <b>👨🏻💻 Блог розробника:</b> @LyBlog
-    <b>GitHub:</b> github.com/LyoSU/quote-bot
+    <b>👨🏻💻 Блог розробника:</b> @arisudesu
 help_group: |
   <b>Привіт!</b>
   Я буду створювати цитати в групі по команді / q у відповідь на повідомлення

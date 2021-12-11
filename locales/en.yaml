@@ -37,10 +37,7 @@ help: |2
   🇺🇸 /lang - change the language
   🇷🇺 /lang - изменить язык
 
-  <b>☕️ Buy coffee for developer:</b> donate.lyo.su
-
-  <b>👨🏻‍💻 Developer blog:</b> @LyBlog
-  <b>GitHub:</b> github.com/LyoSU/quote-bot
+  <b>👨🏻‍💻 Developer blog:</b> @arisudesu
 help_group: |
   <b>Hello!</b>
   I will create quotes in the group using the /q command in response to message

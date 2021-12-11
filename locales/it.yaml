@@ -10,7 +10,7 @@ help: |2
 
     <b>Impostazioni extra per il comando /q:</b>
       Codice HEX o nome del colore: <code>#cbafff</code> oppure <code>indigo</code> — Crea una citazione di colore <b>#cbafff</b>
-      Digita: <code>3</code> — crea una citazione utilizzando gli ultimi <b>3 post</b> 
+      Digita: <code>3</code> — crea una citazione utilizzando gli ultimi <b>3 post</b>
       <code>random</code>: genera un colore random alla citazione
       <code>reply</code> oppure <code>r</code>: crea una citazione salvando le risposte
       <code>p</code> o <code>png</code> — crea un'immagine formato PNG della citazione
@@ -36,10 +36,7 @@ help: |2
   it /lang — cambia la lingua
   🇷🇺 /lang — изменить язык
 
-  <b>☕️ Offri un caffè allo sviluppatore:</b> donate.lyo.su
-
-  <b>👨🏻‍💻 Blog:</b> @LyBlog
-  <b>GitHub:</b> github.com/LyoSU/quote-bot
+  <b>👨🏻‍💻 Blog:</b> @arisudesu
 help_group: |
   <b>Ciao!</b>
   Creerò delle citazioni nel gruppo usando il comando /q in risposta ad un messaggio
