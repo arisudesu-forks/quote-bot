@@ -1,7 +1,5 @@
 module.exports = {
   handleHelp: require('./help'),
-  handleAdv: require('./adv'),
-  handleModerateAdv: require('./adv-moderate'),
   handleQuote: require('./quote'),
   handleGetQuote: require('./get'),
   handleTopQuote: require('./top'),

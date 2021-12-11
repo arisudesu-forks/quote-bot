@@ -10,8 +10,6 @@ const { db } = require('./database')
 const { stats, onlyGroup, onlyAdmin } = require('./middlewares')
 const {
   handleHelp,
-  handleAdv,
-  handleModerateAdv,
   handleQuote,
   handleGetQuote,
   handleTopQuote,
@@ -278,8 +276,6 @@ bot.on('new_chat_members', (ctx, next) => {
 
 bot.start(handleHelp)
 bot.command('help', handleHelp)
-bot.use(handleAdv)
-bot.use(handleModerateAdv)
 
 bot.use(handleInlineQuery)
 
