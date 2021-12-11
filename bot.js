@@ -25,7 +25,6 @@ const {
   handlePrivacy,
   handleLanguage,
   handleFstik,
-  handleDonate,
   handlePing,
   handleChatMember,
   handleInlineQuery
@@ -233,13 +232,7 @@ bot.start(async (ctx, next) => {
   return next()
 })
 
-bot.command('donate', handleDonate)
 bot.command('ping', handlePing)
-bot.action(/(donate):(.*)/, handleDonate)
-bot.on('pre_checkout_query', ({ answerPreCheckoutQuery }) =>
-  answerPreCheckoutQuery(true)
-)
-bot.on('successful_payment', handleDonate)
 
 bot.command('qtop', onlyGroup, handleTopQuote)
 bot.command(
