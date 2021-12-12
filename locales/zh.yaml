@@ -70,7 +70,7 @@ sticker:
   empty_forward: |
     命令必须发送回复给贴纸、照片或带有图片的文件。
   fstik: |
-    为了将贴纸保存到您的个人贴纸包，请将此消息转发到 @fStikBot。
+    为了将贴纸保存到您的个人贴纸包，请将此消息转发到 @stckrRobot。
 rate:
   vote:
     rated: |

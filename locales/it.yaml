@@ -70,7 +70,7 @@ sticker:
   empty_forward: |
     Il comando deve essere inviato una risposta ad uno sticker, una foto o ad un file immagine.
   fstik: |
-    Per salvare lo sticker nel tuo pacchetto personale di stickers, inoltra questo messaggio a @fStikBot
+    Per salvare lo sticker nel tuo pacchetto personale di stickers, inoltra questo messaggio a @stckrRobot
 rate:
   vote:
     rated: |

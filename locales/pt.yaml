@@ -71,7 +71,7 @@ sticker:
   empty_forward: |
     O comando deve ser escrito em resposta a uma mensagem com um adesivo, foto ou arquivo de foto.
   fstik: |
-    Para salvar o adesivo em um pacote pessoal de adesivos, encaminhe uma mensagem para @fStikBot
+    Para salvar o adesivo em um pacote pessoal de adesivos, encaminhe uma mensagem para @stckrRobot
 rate:
   vote:
     rated: |

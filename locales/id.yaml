@@ -63,7 +63,7 @@ sticker:
   empty_forward: |
     Perintah harus dijalankan dengan membalas stiker, foto atau file dengan gambar.
   fstik: |
-    Untuk menyimpan stiker di paket stiker pribadi Anda, teruskan pesan ini ke @fStikBot
+    Untuk menyimpan stiker di paket stiker pribadi Anda, teruskan pesan ini ke @stckrRobot
 rate:
   vote:
     rated: |

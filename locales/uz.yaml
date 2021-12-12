@@ -61,7 +61,7 @@ sticker:
   empty_forward: |
     Buyruqni xabarga javoban stiker, rasm yoki rasm fayli asosida yozish kerak.
   fstik: |
-    Stikerni shaxsiy stikerlar to'plamiga saqlab qo'yish uchun @fStikBot ga xabar yuboring
+    Stikerni shaxsiy stikerlar to'plamiga saqlab qo'yish uchun @stckrRobot ga xabar yuboring
 rate:
   vote:
     rated: |

@@ -71,7 +71,7 @@ sticker:
   empty_forward: |
     Command must be sent a reply to a sticker, photo or file with a picture.
   fstik: |
-    In order to save the sticker to your personal sticker pack, forward this message to @fStikBot
+    In order to save the sticker to your personal sticker pack, forward this message to @stckrRobot
 rate:
   vote:
     rated: |

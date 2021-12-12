@@ -63,7 +63,7 @@ sticker:
   empty_forward: |
     Komut, bir çıkartmaya, fotoğrafa veya resme sahip bir dosyaya yanıt vererek kullanılmalıdır.
   fstik: |
-    Çıkartmayı, kişisel çıkartma paketinize kaydetmek için bu mesajı @fStikBot'a iletin
+    Çıkartmayı, kişisel çıkartma paketinize kaydetmek için bu mesajı @stckrRobot'a iletin
 rate:
   vote:
     rated: |

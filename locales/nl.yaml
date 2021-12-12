@@ -71,7 +71,7 @@ sticker:
   empty_forward: |
     Opdracht moet worden verzonden naar een sticker, foto of bestand met een foto.
   fstik: |
-    Om de sticker op te slaan naar je persoonlijke stickerpakket, stuur dit bericht door naar @fStikBot
+    Om de sticker op te slaan naar je persoonlijke stickerpakket, stuur dit bericht door naar @stckrRobot
 rate:
   vote:
     rated: |

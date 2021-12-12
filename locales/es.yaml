@@ -63,7 +63,7 @@ sticker:
   empty_forward: |
     Debes responder a un sticker, foto o documento con una imagen.
   fstik: |
-    Para guardar este sticker en tu pack personal escribe a @fStikBot
+    Para guardar este sticker en tu pack personal escribe a @stckrRobot
 rate:
   vote:
     rated: |
