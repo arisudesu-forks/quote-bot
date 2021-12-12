@@ -25,7 +25,6 @@ const {
   handlePrivacy,
   handleLanguage,
   handleFstik,
-  handlePing,
   handleChatMember,
   handleInlineQuery
 } = require('./handlers')
@@ -231,8 +230,6 @@ bot.start(async (ctx, next) => {
   }
   return next()
 })
-
-bot.command('ping', handlePing)
 
 bot.command('qtop', onlyGroup, handleTopQuote)
 bot.command(

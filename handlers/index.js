@@ -15,7 +15,6 @@ module.exports = {
   handlePrivacy: require('./privacy-settings'),
   handleLanguage: require('./language'),
   handleFstik: require('./fstik'),
-  handlePing: require('./ping'),
   handleChatMember: require('./chat-member'),
   handleInlineQuery: require('./inline-query')
 }
