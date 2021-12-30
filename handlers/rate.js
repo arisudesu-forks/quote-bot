@@ -56,8 +56,6 @@ module.exports = async ctx => {
       ]
     })
   } else {
-    const advKeyboard = ctx.callbackQuery.message.reply_markup.inline_keyboard.pop().pop()
-
     await ctx.editMessageReplyMarkup({
       inline_keyboard: [
         [
@@ -69,8 +67,7 @@ module.exports = async ctx => {
             text: `👎 ${quoteDb.rate.votes[1].vote.length || ''}`,
             callback_data: 'rate:👎'
           }
-        ],
-        advKeyboard.url ? [advKeyboard] : []
+        ]
       ]
     })
   }
