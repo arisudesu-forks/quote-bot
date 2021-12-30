@@ -43,10 +43,10 @@ setInterval(() => {
     if (noEmptyStats.responseTimeAvrg > 0) noEmptyStats.responseTimeAvrg = (noEmptyStats.responseTimeAvrg + lastResponseTimeAvrg) / 2
     else noEmptyStats.responseTimeAvrg = lastResponseTimeAvrg
 
-    console.log('📩 rps last:', rps)
-    console.log('📩 rps avrg:', noEmptyStats.rpsAvrg)
-    console.log('📩 response time avrg last:', lastResponseTimeAvrg)
-    console.log('📩 response time avrg total:', noEmptyStats.responseTimeAvrg)
+    // console.log('📩 rps last:', rps)
+    // console.log('📩 rps avrg:', noEmptyStats.rpsAvrg)
+    // console.log('📩 response time avrg last:', lastResponseTimeAvrg)
+    // console.log('📩 response time avrg total:', noEmptyStats.responseTimeAvrg)
 
     delete noEmptyStats.times[time]
   }
@@ -65,10 +65,10 @@ setInterval(() => {
     if (stats.responseTimeAvrg > 0) stats.responseTimeAvrg = (stats.responseTimeAvrg + lastResponseTimeAvrg) / 2
     else stats.responseTimeAvrg = lastResponseTimeAvrg
 
-    console.log('🔄 rps last:', rps)
-    console.log('🔄 rps avrg:', stats.rpsAvrg)
-    console.log('🔄 response time avrg last:', lastResponseTimeAvrg)
-    console.log('🔄 response time avrg total:', stats.responseTimeAvrg)
+    // console.log('🔄 rps last:', rps)
+    // console.log('🔄 rps avrg:', stats.rpsAvrg)
+    // console.log('🔄 response time avrg last:', lastResponseTimeAvrg)
+    // console.log('🔄 response time avrg total:', stats.responseTimeAvrg)
 
     rtOP.set(stats.responseTimeAvrg)
 
