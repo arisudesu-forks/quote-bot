@@ -1,35 +1,44 @@
 ---
 language_name: '🇪🇸 Español'
 help: |2
-  <b>¡Hola!</b>
-  Te ayudaré a crear una imagen a partir de un mensaje.
-  Para eso solo responde al mensaje con /q
+  <b>Hello!</b>
+  I will help create a quote from a post.
+  bot can work both in private messages and in groups
 
-    <b>⚙️ Comandos disponibles:</b>
+    <b>⚙️ Available commands:</b>
+  /q <i>[in response to the message]</i> - make a quote from the message
 
-  <code>/help</code> — genera este texto.
-  <code>/q #1b1429</code> <i>[respondiendo a un mensaje]</i> — genera una imagen con el color <b>#1b1429</b>.
-  <code>/q 3</code> <i>[respondiendo a un mensaje]</i> — genera una imagen con <b>el mensaje objetivo y los 2 siguientes</b>.
-  <code>/q r</code> <i>[respondiendo a un mensaje]</i> — genera una imagen con respuesta.
-  <code>/q white r 3</code> <i>[respondiendo a un mensaje]</i> — genera una imagen con un fondo <b>blanco</b> con respuesta.
+    <b>Available flags for the /q command:</b>
+      hex code or color name: <code>#cbafff</code> or <code>indigo</code> - make a quote with color <b>#cbafff</b>
+      Digit: <code>3</code> - make a quote from <b>3 posts</b> down
+      <code>random</code>: random quote color
+      <code>reply</code> or <code>r</code>: make a quote with saving answers
+      <code>p</code> or <code>png</code> - make a PNG quote
+      <code>i</code> or <code>img</code> - make a quote as a picture
+      <code>rate</code> - add a rating to a quote
 
-  <code>/qcolor green</code> — hace el fondo <b>verde</b> por defecto.
+    <b>Example of using flags:</b>
+    <code>/q white rp</code>
+    <code>/q i red</code>
+    <code>/q r #cbafff</code>
 
-  <code>/qs 💜</code> <i>[respondiendo a un mensaje] [solo para administradores]</i> — guarda un sticker/foto/documento con una foto en un pack de grupo con el emoji 💜
-  <code>/qd</code> <i>[respondiendo a un mensaje] [solo para administradores]</i> — borra el sticker del pack de grupo.
+  Only for administrators:
+  <code>/qs 🥰💜</code> <i>[in response to message]</i> - saves a sticker/photo/document with a photo to a sticker pack of a group with emoji 🥰💜 <i>(emoji can be any and any number)</i>
+  <code>/qd</code> <i>[in response to the message]</i> - remove the sticker from the sticker pack of group
+  <code>/qb</code> - set emoji brand. Available: apple, google, twitter, joypixels, blob
+  <code>/qcolor green</code> - set the color of quotes <b>green</b> by default <i>(hex code or color name)</i>
+  <code>/qemoji</code> - change the emoji suffix for stickers
+  <code>/qrate</code> - enable/disable rating of quotes
 
-    <b>❕ Información adicional:</b>
+  /qrand - random a quote with a positive rating of
+  /qtop - top group quotes
 
-  ➖ El orden de los argumentos no importa.
-  ➖ El color del fondo debe estar escrito en HEX, por ejemplo <b>#ffffff</b>, o puedes especificar por nombre: <b>white</b>.
-  ➖ Para obtener un color aleatorio, escribe <b>random</b> como color.
-  ➖ Puedes usar cualquier emoji para guardar en el pack.
-  ➖ Especificar un emoji no es necesario.
-  ➖ El comando <code>/qs</code> debe ser ejecutado la primera vez por el creador del grupo
-  ➖ El bot funciona tanto em grupos como en su chat privado.
-  ➖ Para añadir al bot a tu grupo, presiona el botón de abajo.
+  /help or /start - get this text
 
-  <b>👨🏻‍💻 Blog del creador</b> @arisudesu
+  🇺🇸 /lang - change the language
+  🇷🇺 /lang - изменить язык
+
+  <b>👨🏻‍💻 Developer blog:</b> @arisudesu
 help_group: |
   <b>¡Hola!</b>
   Crearé imágenes con el comando / q en respuesta a mensajes
@@ -39,6 +48,7 @@ btn:
   add_group: Añadir a un grupo
   help: Ayuda
 quote:
+  unsupported_message: Unsupported message
   api_error: |
     <b>😓 Tuve un pronlema al generar la imagen</b>
     <pre>${error}</pre>
@@ -46,6 +56,8 @@ quote:
     El comando debe usarse como respuesta a un mensaje.
   set_background_color: |
     El color de fondo actual es: <code>${backgroundColor}</code>
+  set_emoji_brand: |
+    Quotes' emoji brand is set to: <code>${emojiBrand}</code>
   sticker:
 sticker:
   save:
@@ -114,10 +126,10 @@ donate:
   other: Otros
 emoji:
   info: |
-    Incluya emoji.
+    Please include emoji.
 
-    Por ejemplo, <code>/ emoji 💜</code> cambiará el sufijo a 💜 para todas las pegatinas nuevas posteriores.
-    Para un emoji aleatorio <code>/ emoji aleatorio</code>
+    For example, <code>/qemoji💜</code> will change the suffix to 💜 for all subsequent new stickers.
+    For a random emoji <code>/qemoji random</code>
   done: Emoji successfully changed.
 adv:
   about: |

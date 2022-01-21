@@ -2,36 +2,43 @@
 language_name: '🇹🇷 Türkçe'
 help: |2
   <b>Merhaba!</b>
-  Bir mesajı alıntı oluşturup size gönderirim.
-  Bunu yapabilmem için bir mesajı /q komutu ile yanıtlayın.
+  Bir gönderiden alıntı oluşturmaya yardımcı olacağım.
+  bot hem özel mesajlarda hem de gruplarda
 
-    <b>⚙️ Kullanılabilir Komutlar:</b>
+    <b>⚙️ Kullanılabilir komutlar:</b>
+  /q <i>[mesajı yanıtlayarak]</i> - mesajdan alıntı yapın
 
-  <code>/help</code> — Bu mesajı gösterir
+    <b>/q komutu için mevcut bayraklar:</b>
+      hex kod veya renk adı: <code>#cbafff</code> veya <code>indigo</code> - renkle alıntı yap <b>#cbafff</b>
+      Basamak: <code>3</code> <b>mesajdan alıntı yap 3 mesaj</b> aşağı
+      <code>rastgele</code>: rastgele alıntı renk
+      <code>cevap</code> veya <code>r</code>: cevapları kaydederek fiyat teklifi yapın
+      <code>p</code> veya <code>png</code> - PNG alıntısı yapın
+      <code>i</code> veya <code>img</code> - resim olarak alıntı yapın
+      <code>derece</code> - bir derecelendirme ekleyin alıntı
 
-  <code>/q #1b1429</code> <i>[bir mesajı yanıtlayarak]</i> — renkli bir alıntı mesajı oluşturur<b>#1b1429</b>
-  <code>/q 3</code> <i>[bir mesajı yanıtlayarak]</i> — son atılan <b>3 mesajdan</b> alıntı oluşturur
-  <code>/q r</code> <i>[bir mesajı yanıtlayarak]</i> — cevap verilmiş bir mesaj zincirinden alıntı oluşturur
-  <code>/q white r 3</code> <i>[bir mesajı yanıtlayarak]</i> — son 3 mesajı kaydedip <b>white</b> yani beyaz renkte alıntı oluşturur
+    <b>Bayrak kullanma örneği:</b>
+    <code>/q beyaz rp</code>
+    <code>/qi kırmızı</code>
+    <code>/qr #cbafff</code>
 
-  <code>/qcolor green</code> — varsayılan rengi <b>green</b> yani yeşil olarak ayarlar
+  Yalnızca yöneticiler için:
+  <code>/qs 🥰💜</code> <i>[mesaj yanıt olarak]</i> - fotoğraflı bir çıkartmayı/fotoğrafı/belgeyi emojili bir grubun çıkartma paketine kaydeder 🥰💜 <i>(emoji herhangi bir sayı olabilir)</i>
+  <code>/qd</code> <i>[mesajına yanıt olarak]</i> - çıkartmayı kaldır
+  <code>/qb</code> grubunun çıkartma paketinden - set emoji markası. Kullanılabilir: apple, google, twitter, joypixels, blob
+  <code>/qcolor green</code> - tırnakların rengini varsayılan olarak <b>green</b> <i>(hex kodu veya renk adı)</i>
+  <code>/qemoji</code> - çıkartmalar için emoji son ekini değiştirin
+  <code>/qrate</code> - alıntıların derecelendirmesini etkinleştirme/devre dışı bırakma
 
-  <code>/qs 💜</code> <i>[bir mesajı yanıtlayarak] [sadece yöneticiler için]</i> — alıntılanan mesajı 💜 emojisiyle grup paketine kaydeder
-  <code>/qd</code> <i>[bir mesajı yanıtlayarak] [sadece yöneticiler için]</i> — alıntılanan çıkartmayı, grubun çıkartma paketinden kaldırır
 
-    <b>❕ Ekstra Bilgiler:</b>
+  pozitif derecelendirmeli rastgele bir alıntı /qtop - en iyi grup alıntıları
 
-  ➖ Alıntı rengi bir HEX kodu olmalıdır. Örneğin: <b>#ffffff</b>, veya bir metin açıklaması ise: <b>white</b>.
-  ➖ Benzer şekilde, bunu başka herhangi bir renkle yapabilirsiniz.
-  ➖ Rastgele bir renk için <b>random</b> yazabilirsiniz.
-  ➖ Çıkartmayı kaydetmek için herhangi bir emoji kullanılabilir.
-  ➖ Emoji belirtilmesi zorunlu değildir.
-  ➖ <code>/qs</code> komutu, özel sohbetlerin dışında sadece grup yöneticileri tarafından kullanılabilir.
-  ➖ Bot hem grup sohbetinde hem de doğrudan mesajlarda çalışabilir.
-  ➖ Grubunuza botu eklemek için aşağıdaki butona tıklayın.
-  ➖ Argümanların sırası önemli değildir.
+  /help veya /start - bu metni al
 
-  <b>👨🏻‍💻 Geliştiricinin Blogu:</b> @arisudesu
+  🇺🇸 /lang - dili değiştir
+  🇷🇺 /lang - изменить язык
+
+  <b>👨🏻‍💻 Geliştirici blogu:</b> @arisudesu
 help_group: |
   <b>Merhaba!</b>
   /q komutunu kullanarak yanıtlanan mesajlar için grupta alıntılar oluşturacağım. Benim hakkımda daha fazla bilgi sahibi olmak istiyorsan <a href="t.me/${username}?start=help">/help</a> komutunu kullanabilirsin
@@ -39,6 +46,7 @@ btn:
   add_group: Gruba Ekle
   help: Dökümanlar
 quote:
+  unsupported_message: Desteklenmeyen Cihaz
   api_error: |
     <b>😓 Fiyat teklifi oluşturulamadı</b>
     <pre>${error}</pre>
@@ -46,6 +54,8 @@ quote:
     Komut, bir mesajı yanıtlayarak kullanılmalıdır.
   set_background_color: |
     Alıntıların arka plan rengi şu şekilde ayarlandı: <code>${backgroundColor}</code>
+  set_emoji_brand: |
+    Kdjn
   sticker:
 sticker:
   save:
@@ -95,7 +105,7 @@ privacy:
 top:
   info: |
     <b>En iyi grup alıntıları:</b>
-  open: Open top
+  open: Üstü açık
 donate:
   info: |
     Geliştirici için kahve satın alabilir veya aşağıdaki ayrıntılarla başka bir şey satın alabilirsiniz:
@@ -114,10 +124,10 @@ donate:
   other: Diğer yöntemler
 emoji:
   info: |
-    Пожалуйста, укажите эмодзи.
+    Lütfen emoji ekleyin.
 
-    Например, <code>/emoji 💜</code> поменяет суффикс на 💜 для всех последующих новых стикеров.
-    Для случайного эмодзи <code>/emoji random</code>
+    Örneğin, <code>/qemoji💜</code> , sonraki tüm yeni çıkartmalar için son eki 💜 olarak değiştirecektir.
+    Rastgele bir emoji için <code>/qemoji rastgele</code>
   done: Эмодзи-суффикс успешно изменен.
 adv:
   about: |
