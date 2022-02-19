@@ -63,8 +63,9 @@ bot.use((ctx, next) => {
 bot.use(require('./middlewares/metrics'))
 bot.use(stats)
 
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'))
+
 bot.use((ctx, next) => {
-  const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'))
   ctx.config = config
   ctx.db = db
   return next()
