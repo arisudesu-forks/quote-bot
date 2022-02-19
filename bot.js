@@ -91,10 +91,6 @@ bot.use((ctx, next) => {
   return next()
 })
 
-bot.command('json', ({ replyWithHTML, message }) =>
-  replyWithHTML('<code>' + JSON.stringify(message, null, 2) + '</code>')
-)
-
 bot.use(handleChatMember)
 
 bot.use(
