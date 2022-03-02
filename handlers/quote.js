@@ -36,12 +36,15 @@ function sleep (ms) {
 async function loopClearStickerPack () {
   setInterval(async () => {
     const me = await telegram.getMe()
-    const sticketSet = await telegram.getStickerSet(config.globalStickerSet.name + me.username).catch(() => {})
+    const sticketSet = await telegram.getStickerSet(config.globalStickerSet.name + me.username).catch((error) => {
+      console.error(error)
+    })
     if (!sticketSet) return
     for (const i in sticketSet.stickers) {
       const sticker = sticketSet.stickers[i]
       if (i > config.globalStickerSet.save_sticker_count - 1) {
-        telegram.deleteStickerFromSet(sticker.file_id).catch(() => {
+        telegram.deleteStickerFromSet(sticker.file_id).catch((error) => {
+          console.error(error)
         })
       }
     }
@@ -452,7 +455,8 @@ module.exports = async (ctx, next) => {
           const created = await telegram.createNewStickerSet(ctx.from.id, packName, packTitle, {
             png_sticker: { source: 'placeholder.png' },
             emojis
-          }).catch(() => {
+          }).catch((error) => {
+            console.error(error)
           })
 
           ctx.session.userInfo.tempStickerSet.name = packName
@@ -484,7 +488,8 @@ module.exports = async (ctx, next) => {
             for (const i in sticketSet.stickers) {
               const sticker = sticketSet.stickers[i]
               if (i > config.globalStickerSet.save_sticker_count - 1) {
-                telegram.deleteStickerFromSet(sticker.file_id).catch(() => {
+                telegram.deleteStickerFromSet(sticker.file_id).catch((error) => {
+                  console.error(error)
                 })
               }
             }
