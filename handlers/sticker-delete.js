@@ -8,6 +8,7 @@ module.exports = async ctx => {
 
     if (replyMessage.sticker) {
       const deleteStickerFromSet = await ctx.telegram.deleteStickerFromSet(replyMessage.sticker.file_id).catch((error) => {
+        console.error(error)
         result = ctx.i18n.t('sticker.delete.error.telegram', {
           error
         })

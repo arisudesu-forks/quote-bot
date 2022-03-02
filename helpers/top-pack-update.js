@@ -68,9 +68,7 @@ module.exports = async (db, group, quote) => {
       stickerAdd = await telegram.createNewStickerSet(chatAdministrator.id, packName, packTitle, {
         png_sticker: { source: stickerPNG },
         emojis
-      }).catch((error) => {
-        console.error(error)
-      })
+      }).catch(console.error)
 
       if (stickerAdd) {
         group.topSet.name = packName
@@ -133,8 +131,7 @@ module.exports = async (db, group, quote) => {
   for (const sticker of getStickerSet.stickers) {
     const quoteIndex = await group.topSet.stickers.findIndex((s) => s.fileUniqueId === sticker.file_unique_id)
     if (quoteIndex < 0) {
-      telegram.deleteStickerFromSet(sticker.file_id).catch(() => {
-      })
+      telegram.deleteStickerFromSet(sticker.file_id).catch(console.error)
     }
   }
 

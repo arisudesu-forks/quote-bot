@@ -3,9 +3,7 @@ const Markup = require('telegraf/markup')
 module.exports = async ctx => {
   const quoteId = ctx.match[1].split('@')[0]
 
-  const quote = await ctx.db.Quote.findById(quoteId).catch((error) => {
-    console.error(error)
-  })
+  const quote = await ctx.db.Quote.findById(quoteId).catch(console.error)
 
   if (quote) {
     await ctx.replyWithDocument(quote.file_id, {

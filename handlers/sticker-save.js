@@ -68,6 +68,7 @@ module.exports = async ctx => {
           png_sticker: { source: stickerPNG },
           emojis
         }).catch((error) => {
+          console.error(error)
           if (error.description === 'Bad Request: PEER_ID_INVALID' || error.description === 'Forbidden: bot was blocked by the user') {
             result = ctx.i18n.t('sticker.save.error.need_creator', {
               creator: userName(chatAdministrator, true)
@@ -88,6 +89,7 @@ module.exports = async ctx => {
           png_sticker: { source: stickerPNG },
           emojis
         }, false).catch((error) => {
+          console.error(error)
           if (error.description.includes('STICKERSET_INVALID') || error.description.includes('TOO_MUCH')) {
             ctx.group.info.stickerSet = undefined
             delete ctx.group.info.stickerSet
