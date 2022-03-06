@@ -72,6 +72,10 @@ const minIdsInChat = {}
 module.exports = async (ctx, next) => {
   quoteCountIO.mark()
 
+  if (ctx.chat.type === 'private') {
+    return
+  }
+
   const flag = {
     count: false,
     reply: false,
