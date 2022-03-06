@@ -374,6 +374,8 @@ module.exports = async (ctx, next) => {
   let format
   if (!flag.privacy && type === 'quote') format = 'png'
 
+  console.log(`Request generate quote for chat_id=${ctx.chat.id}; msg=${ctx.message.message_id}; c=${messageCount}`)
+
   const generate = await got.post(`${process.env.QUOTE_API_URI}/generate.png?botToken=${process.env.BOT_TOKEN}`, {
     json: {
       type,
