@@ -41,9 +41,9 @@ module.exports = async ctx => {
         imageSharp.resize({ width: 512 })
       }
 
-      const stickerPNG = await imageSharp.webp({ quality: 100 }).png({
+      const stickerPNG = await imageSharp.png({
         compressionLevel: 9,
-        force: false
+        force: true,
       }).toBuffer()
 
       let stickerAdd
