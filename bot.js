@@ -5,9 +5,8 @@ const Composer = require('telegraf/composer')
 const session = require('telegraf/session')
 const rateLimit = require('telegraf-ratelimit')
 const I18n = require('telegraf-i18n')
-const io = require('@pm2/io')
 const { db } = require('./database')
-const { stats, onlyGroup, onlyAdmin } = require('./middlewares')
+const { onlyGroup, onlyAdmin } = require('./middlewares')
 const {
   handleHelp,
   handleQuote,
@@ -31,16 +30,6 @@ const {
 } = require('./handlers')
 const { getUser, getGroup } = require('./helpers')
 
-const rpsIO = io.meter({
-  name: 'req/sec',
-  unit: 'update'
-})
-
-const messageCountIO = io.meter({
-  name: 'message count',
-  unit: 'message'
-})
-
 const randomInteger = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min
 
@@ -61,7 +50,6 @@ bot.use((ctx, next) => {
 })
 
 bot.use(require('./middlewares/metrics'))
-bot.use(stats)
 
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'))
 
@@ -72,7 +60,6 @@ bot.use((ctx, next) => {
 })
 
 bot.use((ctx, next) => {
-  rpsIO.mark()
   ctx.telegram.oCallApi = ctx.telegram.callApi
   ctx.telegram.callApi = (method, data = {}) => {
     // console.log(`send method ${method}`)
@@ -143,9 +130,7 @@ bot.use(
 
 bot.use(async (ctx, next) => {
   ctx.state.emptyRequest = false
-  return next().then(() => {
-    if (ctx.state.emptyRequest === false) messageCountIO.mark()
-  })
+  return next()
 })
 
 bot.use(
