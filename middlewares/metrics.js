@@ -25,6 +25,12 @@ const metrics = {
     name: prefix('process_update'),
     help: prefix('process_update'),
     buckets
+  }),
+  api_latency: new client.Histogram({
+    name: prefix('api_latency'),
+    help: prefix('api_latency'),
+    buckets,
+    labelNames: ['method']
   })
 }
 
@@ -36,7 +42,24 @@ http.createServer((req, res) => {
   res.end()
 }).listen(process.env.METRICS_PORT)
 
-module.exports = async (ctx, next) => {
+const measureProcessUpdate = async (ctx, next) => {
   const end = metrics.process_update.startTimer()
   return next().then(() => end())
+}
+
+const measureApiLatency = async (ctx, next) => {
+  ctx.telegram.oCallApi = ctx.telegram.callApi
+  ctx.telegram.callApi = (method, data = {}) => {
+    const end = metrics.api_latency.startTimer({ method: method })
+    return ctx.telegram.oCallApi(method, data).then((result) => {
+      end()
+      return result
+    })
+  }
+  return next()
+}
+
+module.exports = {
+  measureProcessUpdate,
+  measureApiLatency
 }

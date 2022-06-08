@@ -29,6 +29,7 @@ const {
   handleInlineQuery
 } = require('./handlers')
 const { getUser, getGroup } = require('./helpers')
+const { measureApiLatency, measureProcessUpdate } = require('./middlewares/metrics')
 
 const randomInteger = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min
@@ -49,33 +50,14 @@ bot.use((ctx, next) => {
   return true
 })
 
-bot.use(require('./middlewares/metrics'))
+bot.use(measureProcessUpdate)
+bot.use(measureApiLatency)
 
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'))
 
 bot.use((ctx, next) => {
   ctx.config = config
   ctx.db = db
-  return next()
-})
-
-bot.use((ctx, next) => {
-  ctx.telegram.oCallApi = ctx.telegram.callApi
-  ctx.telegram.callApi = (method, data = {}) => {
-    // console.log(`send method ${method}`)
-    const startMs = new Date()
-    return ctx.telegram.oCallApi(method, data).then((result) => {
-      console.log(`end method ${method}:`, new Date() - startMs)
-      return result
-    })
-  }
-
-  // if (ctx.update.message) {
-  //   const dif = Math.round(new Date().getTime() / 1000) - ctx.update.message.date
-
-  //   if (dif > 2) console.log('🚨 delay ', dif)
-  // }
-
   return next()
 })
 
