@@ -108,22 +108,6 @@ top:
   info: |
     <b>Kutipan grup teratas:</b>
   open: Buka atas
-donate:
-  info: |
-    Anda dapat membeli kopi untuk developer atau yang lainnya dengan detail sebagai berikut:
-
-    BTC: <code>17QaN4wPZFaH4qtsgDdTaYwiW9s9PUcHj7</code>
-    ETH/BUSD: <code>0x34007b75775F8DAe005A407141617aA2fBa2740c</code>
-    monobank: 4441114453205120 | <a href="https://send.monobank.ua/3cxwjqz4C2">Visa/MasterCard</a>
-
-    Lainnya: donate.lyo.su
-  title: Donasi ${botUsername}
-  description: Dukungan pengembangan bot
-  successful: |
-    <b>Terima kasih telah mendukung bot 💜</b>
-  pay: '💜 Bayar Telegram'
-  liqpay: LiqPay (VISA, MasterCard)
-  other: Sebaliknya
 emoji:
   info: |
     Harap sertakan emoji.
@@ -131,82 +115,6 @@ emoji:
     Misalnya, <code>/qemoji💜</code> akan mengubah akhiran menjadi untuk semua stiker baru berikutnya.
     Untuk emoji acak <code>/qemoji acak</code>
   done: Emoji berhasil diubah.
-adv:
-  about: |
-    <b>Anda dapat membeli iklan dari kami untuk sejumlah besar pengguna dan grup aktif</b>
-
-    • Bot kami ada di lebih dari 30.000 grup aktif dan lebih dari 70.000 pengguna menggunakan bot setiap bulan.
-    Diantaranya adalah pengguna dari berbagai negara. Anda dapat memilih bahasa pengguna yang akan menampilkan iklan
-    • Iklan ditampilkan di bawah kutipan dalam bentuk tombol atau pesan teks, tergantung pada obrolan pengguna
-    • Anda menentukan sendiri harga iklan; pertama-tama, iklan dengan jumlah tertinggi akan ditampilkan
-    • Teks dan konten iklan harus mematuhi aturan kami (/adv_rules) dan sebelum diposting, Anda harus melewati moderasi. Ini dapat dilakukan sebelum melakukan deposit
-
-    Saldo: ${balance} USD
-  rules: |
-    <b>Dalam iklan, <u>tidak diperbolehkan</u></b>
-    • Menggunakan kata-kata kotor atau hinaan
-    • Menggunakan lebih dari 1 emoji per teks
-    • Informasi yang menyesatkan
-    • Informasi yang dilarang oleh hukum Ukraina
-    • Konten dewasa
-    • Perjudian
-
-    <i>Kami juga berhak menolak iklan jika kita tidak menyukainya tanpa alasan.</i>
-  main_menu:
-    create_btn: Buat iklan
-    list_btn: Daftar iklan
-    pay_btn: Isi ulang saldo
-  create:
-    enter_text: |
-      Masukkan teks iklan Anda:
-
-      <i>Tidak lebih dari 70 karakter dan harus mematuhi aturan kami (/adv_rules)</i>
-    enter_link: |
-      Masukkan tautan ke sumber yang diiklankan:
-
-      <i>Tautan harus lengkap, jika Anda mengiklankan sesuatu di Telegram, tautannya harus dimulai dengan t.me.
-      Sumber daya harus mematuhi aturan kami (/adv_rules), jika setelah melewati moderasi situs diganti, akun Anda akan diblokir, dan uang tidak akan dikembalikan.</i>
-    select_locale: |
-      Pilih bahasa pengguna yang akan menampilkan iklan
-
-      Angka adalah jumlah pengguna yang berpotensi melihat iklan Anda dalam bahasa tersebut.
-      Hanya pengguna yang benar-benar menggunakan bot yang dihitung. Namun iklan tersebut juga dapat dilihat oleh pengguna lain yang berada di grup tempat kutipan tersebut dibuat, sehingga angka ini bisa jauh lebih tinggi
-
-      <i>Bahasa tidak sesuai dengan negara.
-      Anda hanya dapat memilih satu bahasa, jika Anda membutuhkan beberapa, silakan buat iklan lagi untuk bahasa lain.</i>
-    enter_price: |
-      Tentukan harga per 1000 tayangan iklan Anda dalam USD:
-
-      <u>Harga rata-rata iklan aktif:</u> ${averagePrice} USD
-
-      <i>Harga minimum adalah 0,15 USD.
-      Iklan ditampilkan secara acak, tetapi peluang tertinggi untuk ditampilkan adalah iklan yang memiliki harga tayangan lebih tinggi.
-      </i>
-    sent_moderate: |
-      Iklan telah dikirim untuk moderasi. Harap bersabar dan menunggu. Jika moderasi berhasil atau tidak berhasil, Anda akan menerima pemberitahuan.
-  list:
-    select_list: |
-      pilih_daftar
-    wait_btn: tunggu_btn
-    ready_btn: ready_btn
-    end_btn: akhir_btn
-    selected_list: |
-      dipilih_daftar
-  moderate:
-    adv: |
-      Adv #id_${adv._id} dari <a href="tg://user?id=${telegramId}">${name}</a>
-
-      Teks: ${adv.text}
-      Tautan: ${adv.link}
-      Lokal: ${adv.locale}
-      Harga: ${adv.price}
-      Hitungan ${adv.count}
-    accepted: |
-      Iklan berhasil dimoderasi. Anda dapat mulai menampilkannya di bagian iklan: /adv
-    denied: |
-      Sayangnya iklan belum dimoderasi. Harap baca aturan kami (/adv_rules), jika Anda yakin ini adalah kesalahan, tulis kepada kami di @Ly_OBot dan sertakan tag ini dalam pesan yang menjelaskan masalah: #qba_${adv.id}
-    accept_btn: Setuju
-    deny_btn: Menyangkal
 only_admin: |
   Perintah ini hanya dapat dijalankan oleh administrator grup.
 only_group: |

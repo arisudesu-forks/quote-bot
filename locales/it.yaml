@@ -108,22 +108,6 @@ top:
   info: |
     <b>Citazioni migliori del gruppo:</b>
   open: Open top
-donate:
-  info: |
-    Offri un caffè allo sviluppatore del bot usando i seguenti dati:
-
-    BTC: <code>17QaN4wPZFaH4qtsgDdTaYwiW9s9PUcHj7</code>
-    ETH/BUSD: <code>0x34007b75775F8DAe005A407141617aA2fBa2740c</code>
-    monobank: 4441114453205120 | <a href="https://send.monobank.ua/3cxwjqz4C2">Visa/MasterCard</a>
-
-    Altro: donate.lyo.su
-  title: Fai una donazione ${botUsername}
-  description: Sostieni lo sviluppo del bot
-  successful: |
-    <b>Grazie per aver contribuito allo sviluppo del bot 💜</b>
-  pay: '💜 Paga con Telegram'
-  liqpay: LiqPay (VISA, MasterCard)
-  other: Altre opzioni
 emoji:
   info: |
     Please include emoji.
@@ -131,82 +115,6 @@ emoji:
     For example, <code>/qemoji💜</code> will change the suffix to 💜 for all subsequent new stickers.
     For a random emoji <code>/qemoji random</code>
   done: L'emoji è stata cambiata correttamente.
-adv:
-  about: |
-    <b>💫 Puoi acquistare pubblicità da noi per un gran numero di utenti e gruppi attivi</b>
-
-    - Il nostro bot è in più di 30.000 gruppi attivi e più di 70.000 utenti usano il bot ogni mese.
-    Tra questi ci sono utenti di vari nazioni. È possibile selezionare la lingua degli utenti per i quali la pubblicità deve essere visualizzata
-    - La pubblicità viene visualizzata sotto la citazione sotto forma di un pulsante o di un messaggio di testo, a seconda della chat dell'utente
-    - È possibile specificare il prezzo di un'inserzione; prima verrà visualizzata l'inserzione per la quale è stato assegnato l'importo più alto
-    - Il testo e il contenuto dell'annuncio devono essere conformi alle nostre regole (/adv_rules) e prima di essere pubblicato deve superare la fase di moderazione. Questo può essere fatto prima di effettuare un deposito
-
-    Saldo: ${balance} USD
-  rules: |
-    <b>Nelle pubblicità <u>non</u> è permesso:</b>
-    - Usare oscenità o insulti
-    - Usare più di 1 emoji per testo
-    - Informazioni fuorvianti
-    - Informazioni proibite dalle leggi ucraine
-    - Contenuto per adulti
-    - Gioco d'azzardo
-
-    <i>Abbiamo anche il diritto di rifiutare un annuncio qualora non ci dovesse piacere, per qualsiasi ragione.</i>
-  main_menu:
-    create_btn: Crea ads
-    list_btn: Lista delle ads
-    pay_btn: Ricarica saldo
-  create:
-    enter_text: |
-      Inserisci il testo del tuo annuncio:
-
-      <i>Non più di 70 caratteri e deve rispettare le nostre regole (/adv_rules)</i>
-    enter_link: |
-      Inserisci un link alla risorsa pubblicizzata:
-
-      <i>Il link deve essere completo, se stai pubblicizzando qualcosa in Telegram, il link deve iniziare con t.me.
-      La risorsa deve rispettare le nostre regole (/adv_rules), se dopo aver superato la fase di moderazione il sito viene cambiato, il tuo account verrà bloccato e i soldi non verranno rimborsati.</i>
-    select_locale: |
-      Seleziona la lingua degli utenti a cui verrà mostrato l'annuncio
-
-      Il numero rappresenta gli utenti che potenzialmente vedranno il tuo annuncio in quella lingua.
-      Vengono contati solo gli utenti che usano effettivamente il bot. Ma l'annuncio può essere visto anche da altri utenti che sono nel gruppo in cui è stata fatta la citazione, quindi questa cifra può essere molto più alta
-
-      <i>La lingua non corrisponde al paese.
-      Puoi scegliere solo una lingua, se ne hai bisogno di più, crea di nuovo un annuncio per un'altra lingua.</i>
-    enter_price: |
-      Specifica il prezzo per 1000 visualizzazioni del tuo annuncio in USD:
-
-      <u>Prezzo medio degli annunci attivi:</u> ${averagePrice} USD
-
-      <i>Il prezzo minimo è 0,15 USD.
-      Gli annunci vengono mostrati in modo casuale, ma ci sono più probabilità che venga mostrato un annuncio che ha offerto un prezzo per visualizzazioni più alto.
-      </i>
-    sent_moderate: |
-      L'annuncio è stato inviato per la moderazione. Per favore, sii paziente e aspetta. Quando la fase di moderazione produrrà un esito, positivo o negativo che sia, riceverai una notifica.
-  list:
-    select_list: |
-      select_list
-    wait_btn: wait_btn
-    ready_btn: ready_btn
-    end_btn: end_btn
-    selected_list: |
-      selected_list
-  moderate:
-    adv: |
-      Adv #id_${adv._id} da <a href="tg://user?id=${telegramId}">${name}</a>
-
-      Testo: ${adv.text}
-      Link: ${adv.link}
-      Locale: ${adv.locale}
-      Prezzo: ${adv.price}
-      Numero ${adv.count}
-    accepted: |
-      L'annuncio è stato approvato. Puoi vederlo nella sezione pubblicità: /adv
-    denied: |
-      Purtroppo l'annuncio non è stato approvato. Per favore leggi le nostre regole (/adv_rules), se sei sicuro che ci sia stato un errore, scrivici a @Ly_OBot e includi questo tag nel messaggio descrivendo il problema: #qba_${adv.id}
-    accept_btn: Accetta
-    deny_btn: Rifiuta
 only_admin: |
   Solo gli amministratori del gruppo possono utilizzare questo comando.
 only_group: |

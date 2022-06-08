@@ -108,22 +108,6 @@ top:
   info: |
     <b>热度最高的群组引用：</b>
   open: Open top
-donate:
-  info: |
-    您可以为开发者买杯咖啡以示支持，详细捐赠方式如下：
-
-    BTC： <code>17QAN4wPZFaH4qtsgDdTaYwiW9s9PUcHj7</code>
-    ETH/BUSD： <code>0x34007b7b75F8DAe005A4071416aA2fBa2740c</code>
-    monobank：4441114453205| <a href="https://send.monobank.ua/3cxwjqz4C2">Visa/MasterCarterCard</a>
-
-    更多方式请查看：donate.lyo.su
-  title: 捐赠 ${botUsername}
-  description: 支持此 bot 开发
-  successful: |
-    <b>感谢您支持此 bot 💜</b>
-  pay: '💜 通过 Telegram 支付'
-  liqpay: LiqPay (VISA, MasterCard)
-  other: 其它选项
 emoji:
   info: |
     Please include emoji.
@@ -131,82 +115,6 @@ emoji:
     For example, <code>/qemoji💜</code> will change the suffix to 💜 for all subsequent new stickers.
     For a random emoji <code>/qemoji random</code>
   done: Emoji 添加成功！
-adv:
-  about: |
-    <b>💫 您可以从我们这里购买广告投放到众多活跃用户和群组中</b>
-
-    我们的机器人在超过 30000 个活跃群组中，每月超过 70000 个用户使用机器人。
-    其中包括来自不同国家的用户。 您可以选择向特定语言的用户投放广告
-    • 广告以按钮或文字信息形式显示在引用下方， 具体形式根据用户的聊天而异
-    • 您自己指定广告价格； 最高出价的广告将被首先显示
-    • 广告的文本和内容必须符合我们的规则 (/adv_rules) 并且在发布之前您必须通过审查。 这可以在支付前完成
-
-    余额: ${balance} 美元
-  rules: |
-    <b>在广告中，不允许 <u></u> ：</b>
-    • 使用淫秽或侮辱
-    • 使用超过1次的表情信息
-    • 误导信息
-    • 被乌克兰法律禁止的信息
-    • 成人内容
-    • 赌博
-
-    <i>如果我们没有理由不喜欢广告，我们也有权拒绝广告。</i>
-  main_menu:
-    create_btn: 创建广告
-    list_btn: 广告列表
-    pay_btn: 充值余额
-  create:
-    enter_text: |
-      输入您的广告文字：
-
-      <i>不超过 70 个字符，并且必须符合我们的规则 (/adv_rules)</i>
-    enter_link: |
-      输入广告资源的链接：
-
-      <i>链接必须完整，如果您在 Telegram 中做广告，链接必须以 t.me 开头。
-      资源必须符合我们的规则（/adv_rules），如果审核通过后更换网站，您的账号将被封禁，款项不予退还。</i>
-    select_locale: |
-      选择将向其展示广告的用户的语言
-
-      该数字是可能会看到该语言的广告的用户数量。
-      仅计算实际使用机器人的用户。但是该广告也可以被引用所在组中的其他用户看到，因此这个数字可能要高得多
-
-      <i>语言与国家/地区不对应。
-      您只能选择一种语言，如果您需要多种语言，请重新制作另一种语言的广告。</i>
-    enter_price: |
-      以美元指定每 1000 次广告展示的价格：
-
-      <u>活动广告的平均价格：</u> ${averagePrice} 美元
-
-      <i>最低价格为 0.15 美元。
-      广告以随机方式展示，但价格较高的广告展示机会更高。
-      </i>
-    sent_moderate: |
-      该广告已发送以供审核。请耐心等待。如果审核成功或不成功，您将收到通知。
-  list:
-    select_list: |
-      select_list
-    wait_btn: wait_btn
-    ready_btn: ready_btn
-    end_btn: end_btn
-    selected_list: |
-      selected_list
-  moderate:
-    adv: |
-      Adv #id_${adv._id} from <a href="tg://user?id=${telegramId}">${name}</a>
-
-      Text: ${adv.text}
-      Link: ${adv.link}
-      Locale: ${adv.locale}
-      Price: ${adv.price}
-      Count ${adv.count}
-    accepted: |
-      广告已成功审核。您可以开始在广告部分展示它：/adv
-    denied: |
-      不幸的是，该广告尚未经过审核。请阅读我们的规则 (/adv_rules)，如果您确定这是一个错误，请通过@Ly_OBot 写信给我们，并在描述问题的消息中包含此标签：#qba_${adv.id}
-    accept_btn: 批准
-    deny_btn: 拒绝
 only_admin: |
   只有群组管理员可以使用此命令。
 only_group: |

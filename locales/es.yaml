@@ -108,22 +108,6 @@ top:
   info: |
     <b>Mejores creaciones:</b>
   open: Parte superior
-donate:
-  info: |
-    Puede comprar café para el desarrollador o algo más con los siguientes detalles:
-
-    BTC: <code>17QaN4wPZFaH4qtsgDdTaYwiW9s9PUcHj7</code>
-    ETH / BUSD: <code>0x34007b75775F8DAe005A407141617aA2fBa2740c</code>
-    monobank320512014 | <a href="https://send.monobank.ua/3cxwjqz4C2">Visa / MasterCard</a>
-
-    Más: donate.lyo.su
-  title: Donar ${botUsername}
-  description: Apoya el desarrollo del bot
-  successful: |
-    <b>Gracias por tu apoyo 💜</b>
-  pay: '💜 Pagar vía Telegram'
-  liqpay: LiqPay (VISA, MasterCard)
-  other: Otros
 emoji:
   info: |
     Please include emoji.
@@ -131,82 +115,6 @@ emoji:
     For example, <code>/qemoji💜</code> will change the suffix to 💜 for all subsequent new stickers.
     For a random emoji <code>/qemoji random</code>
   done: Emoji successfully changed.
-adv:
-  about: |
-    <b>💫 Puede comprarnos publicidad para una gran cantidad de usuarios y grupos activos</b>
-
-    • Nuestro bot está en más de 30`000 grupos activos y más de 70`000 usuarios usan el bot cada mes.
-    Entre ellos se encuentran usuarios de varios países. Puede seleccionar el idioma de los usuarios para los que se debe mostrar el anuncio
-    • La publicidad se muestra debajo de la cita en forma de botón o mensaje de texto, dependiendo del chat del usuario
-    • Usted mismo especifica el precio de un anuncio; en primer lugar, se mostrará el anuncio para el que se asignó la mayor cantidad.
-    • El texto y el contenido del anuncio deben cumplir con nuestras reglas (/ adv_rules) y antes de que se publique debe pasar la moderación. Esto se puede hacer antes de realizar un depósito
-
-    Saldo: ${balance} USD
-  rules: |
-    <b>In advertisements it is <u>not</u> allowed:</b>
-    • Using obscenities or insults
-    • Using more than 1 emoji per text
-    • Misleading information
-    • Information prohibited by the laws of Ukraine
-    • Adult content
-    • Gambling
-
-    <i>We also have the right to reject an advertisement if we simply do not like it for no reason.</i>
-  main_menu:
-    create_btn: Crear anuncios
-    list_btn: Lista de anuncios
-    pay_btn: Top up balance
-  create:
-    enter_text: |
-      Enter your ad text:
-
-      <i>No more than 70 characters and must comply with our rules (/adv_rules)</i>
-    enter_link: |
-      Enter a link to the advertised resource:
-
-      <i>The link must be complete, if you are advertising something in Telegram, the link must begin with t.me.
-      The resource must comply with our rules (/adv_rules), if after passing the moderation the site is replaced, your account will be blocked, and the money will not be refunded.</i>
-    select_locale: |
-      Select the language of the users to whom the ad will be shown
-
-      The number is the number of users who will potentially see your ad in that language.
-      Only users who actually use the bot are counted. But the ad can also be seen by other users who are in the group where the quote was made, so this figure can be much higher
-
-      <i>The language does not correspond to the country.
-      You can choose only one language, if you need several, please create an advertisement again for another language.</i>
-    enter_price: |
-      Specify the price per 1000 impressions of your ad in USD:
-
-      <u>Average price of active ads:</u> ${averagePrice} USD
-
-      <i>The minimum price is 0.15 USD.
-      Ads are shown in a random way, but the highest chance of being shown has an ad that has a higher price for impressions.
-      </i>
-    sent_moderate: |
-      The advertisement has been sent for moderation. Please be patient and wait. If moderation is successful or unsuccessful, you will receive a notification.
-  list:
-    select_list: |
-      select_list
-    wait_btn: wait_btn
-    ready_btn: ready_btn
-    end_btn: end_btn
-    selected_list: |
-      selected_list
-  moderate:
-    adv: |
-      Adv #id_${adv._id} from <a href="tg://user?id=${telegramId}">${name}</a>
-
-      Text: ${adv.text}
-      Link: ${adv.link}
-      Locale: ${adv.locale}
-      Price: ${adv.price}
-      Count ${adv.count}
-    accepted: |
-      The ad was successfully moderated. You can start showing it in the advertising section: /adv
-    denied: |
-      Unfortunately the ad has not been moderated. Please read our rules (/adv_rules), if you are sure that this was a mistake, write to us at @Ly_OBot and include this tag in the message describing the problem: #qba_${adv.id}
-    accept_btn: Aceptar
-    deny_btn: Rechazar
 only_admin: |
   Solo el administrador puede usar este comando.
 only_group: |
