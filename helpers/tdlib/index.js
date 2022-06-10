@@ -24,6 +24,11 @@ const client = new Client(new TDLib(`${tdDirectory}/${tdLibFile}`), {
 client.on('error', console.error)
 
 async function main () {
+  await client.invoke({ _: 'setOption', name: 'ignore_inline_thumbnails', value: { _: 'optionValueBoolean', value: true } })
+  await client.invoke({ _: 'setOption', name: 'reuse_uploaded_photos_by_hash', value: { _: 'optionValueBoolean', value: true } })
+  await client.invoke({ _: 'setOption', name: 'disable_persistent_network_statistics', value: { _: 'optionValueBoolean', value: true } })
+  await client.invoke({ _: 'setOption', name: 'disable_time_adjustment_protection', value: { _: 'optionValueBoolean', value: true } })
+
   await client.connectAndLogin(() => ({
     type: 'bot',
     getToken: retry => retry
