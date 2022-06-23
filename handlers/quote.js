@@ -392,10 +392,10 @@ module.exports = async (ctx, next) => {
 
   if (generate.error) {
     if (generate.error.response && generate.error.response.body) {
-      const errorMessage = JSON.parse(generate.error.response.body).error.message
+      // const errorMessage = JSON.parse(generate.error.response.body).error.message
 
       return ctx.replyWithHTML(ctx.i18n.t('quote.api_error', {
-        error: errorMessage
+        error: 'internal_error'
       }), {
         reply_to_message_id: ctx.message.message_id,
         allow_sending_without_reply: true
