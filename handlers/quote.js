@@ -281,6 +281,9 @@ module.exports = async (ctx, next) => {
     if (flag.media && quoteMessage.photo) message.media = quoteMessage.photo
     if (flag.media && quoteMessage.sticker) {
       message.media = [quoteMessage.sticker]
+      if (quoteMessage.sticker.is_video) {
+        message.media = [quoteMessage.sticker.thumb]
+      }
       message.mediaType = 'sticker'
     }
     if (flag.media && (quoteMessage.animation || quoteMessage.video)) {
