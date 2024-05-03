@@ -141,7 +141,7 @@ module.exports = async (ctx, next) => {
     messageCount = maxQuoteMessage
   }
 
-  messageCount = Math.min(messageCount, maxQuoteMessage)
+  messageCount = Math.max(Math.min(messageCount, maxQuoteMessage), 0 - maxQuoteMessage)
 
   if (!quoteMessage) {
     return ctx.replyWithHTML(ctx.i18n.t('quote.empty_forward'), {
