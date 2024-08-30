@@ -112,6 +112,7 @@ bot.use(
 )
 
 bot.use(async (ctx, next) => {
+  console.log('set ctx.state.emptyRequest = false')
   ctx.state.emptyRequest = false
   return next()
 })
@@ -139,6 +140,7 @@ const updateGroupAndUser = async (ctx, next) => {
   await getUser(ctx)
   await getGroup(ctx)
   return next(ctx).then(async () => {
+    console.log(`ctx.state.emptyRequest = ${ctx.state.emptyRequest}`)
     if (ctx.state.emptyRequest === false) {
       ctx.session.userInfo.save().catch(() => {})
       const memberCount = await ctx.telegram.getChatMembersCount(ctx.chat.id)
@@ -277,6 +279,7 @@ bot.on(
 )
 
 bot.use((ctx, next) => {
+  console.log('set ctx.state.emptyRequest = true')
   ctx.state.emptyRequest = true
   return next()
 })
