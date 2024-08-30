@@ -106,7 +106,8 @@ bot.use(
         return `user:${ctx.from.id}`
       }
       return null
-    }
+    },
+    ttl: 60 * 5
   })
 )
 
