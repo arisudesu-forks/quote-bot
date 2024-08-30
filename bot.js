@@ -188,7 +188,7 @@ bot.on(
 bot.start(async (ctx, next) => {
   const arg = ctx.message.text.split(' ')
   if (arg[1]) {
-    await ctx.tg.sendMessage(
+    await ctx.telegram.sendMessage(
       ctx.config.adminId,
       `#${arg[1]}\n<code>${JSON.stringify(ctx.message, null, 2)}</code>`,
       {

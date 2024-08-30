@@ -1,6 +1,6 @@
 module.exports = async (ctx, next) => {
   if (['supergroup', 'group'].includes(ctx.chat.type)) {
-    const chatMember = await ctx.tg.getChatMember(
+    const chatMember = await ctx.telegram.getChatMember(
       ctx.message.chat.id,
       ctx.message.from.id
     ).catch(console.error)

@@ -25,7 +25,7 @@ module.exports = async ctx => {
   if (ctx.updateType === 'callback_query') {
     if (locales[ctx.match[1]]) {
       if (['supergroup', 'group'].includes(ctx.chat.type)) {
-        const chatMember = await ctx.tg.getChatMember(
+        const chatMember = await ctx.telegram.getChatMember(
           ctx.callbackQuery.message.chat.id,
           ctx.callbackQuery.from.id
         )

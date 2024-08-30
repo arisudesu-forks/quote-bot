@@ -216,7 +216,7 @@ module.exports = async (ctx, next) => {
             username: sarchForwardName[0].username || null
           }
 
-          const getHiddenChat = await ctx.tg.getChat(sarchForwardName[0].telegram_id).catch(console.error)
+          const getHiddenChat = await ctx.telegram.getChat(sarchForwardName[0].telegram_id).catch(console.error)
           if (getHiddenChat) messageFrom.photo = getHiddenChat.photo
         } else {
           messageFrom = {
@@ -469,7 +469,7 @@ module.exports = async (ctx, next) => {
           packName = ctx.session.userInfo.tempStickerSet.name
         }
 
-        const addSticker = await ctx.tg.addStickerToSet(packOwnerId, packName, {
+        const addSticker = await ctx.telegram.addStickerToSet(packOwnerId, packName, {
           png_sticker: { source: image },
           emojis
         }, true).catch((error) => {
